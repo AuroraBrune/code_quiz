@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<h3 id="countdownTimer">You will have 75 seconds to answer all 5 questions. Good luck. </h3>
+
+<body>
+    <div class="jumbotron-q">
+        <h1 class="display-4">JavaScript Quiz</h1>
+
+        <hr class="my-4">
+    
+        <container class="lead">
+            <h3 class="question">"question goes here"</h3>
+            <div class="buttons_div">
+                <div class="btn-group-vertical">
+                    <input type="radio" id="a" name="quest" value="this is an answer">
+                    <label for="A.">this is a test</label><br>
+
+                    <input type="radio" id="b" name="quest" value="">
+                    <label for="B.">that is right</label><br>
+
+                    <input type="radio" id="c" name="quest" value="">
+                    <label for="C.">this is c </label><br>
+
+                    <input type="radio" id="d" name="quest" value="">
+                    <label for="D.">this is d </label>
+                </div>
+            </div>
+
+        </container>
+    </div>
+    <div id="quiz"></div>
+    <button id="submit">Submit Quiz</button>
+    <div id="results"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
