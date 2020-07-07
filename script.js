@@ -2,7 +2,7 @@
 var scoreText = 0;
 let score = document.getElementById("score");
 score.innerHTML = scoreText;
-let hiScore = [];
+var userName = "";
 
 //setting my questions array, could have also built using JSON object
 let myQuestions = [];
@@ -37,7 +37,7 @@ const timer = setInterval(function () {
         //code here to end game and give score
     }
 }, 1000);
-//initiallizing first question on page
+//initiallizing first question on page, and continue through each question until each has been displayed. 
 showMyQuestions();
 
 function showMyQuestions() {
@@ -50,30 +50,30 @@ function showMyQuestions() {
 
 }
 
-     
+
 
 function userScore() {
-   
-    var answer = question[4]; //this is the index of the correct answer for a question
+
+    var answer = question[4]; //for each quesiton array, the answer at at index 4
     var choice;
     if (document.getElementById("a").checked == true) {
         choice = 1;
-        document.getElementById("a").checked = false;  //this resets the buttons to off for next question
+        document.getElementById("a").checked = false;  //this resets the buttons to off for next question, otherwise the radio button selected on last question stays lit
     }
     if (document.getElementById("b").checked == true) {
         choice = 2;
         document.getElementById("b").checked = false;
     }
-
     if (document.getElementById("c").checked == true) {
         choice = 3;
         document.getElementById("c").checked = false;
     }
+
     //test for correct answer
     if (choice == answer) {
         scoreText++;
         score.innerHTML = scoreText;
-         
+
     } else {
         secondsLeft = secondsLeft - 15;
     }
@@ -83,70 +83,20 @@ function userScore() {
     if (currentIndex > myQuestions.length - 1) {
         //game over
         clearInterval(timer);
-        document.getElementById("finished").style.display = "none";
-        
+        document.getElementById("answer-window").style.display = "none"; //This will remove the questions from the page so score can be displayed in the same place on the DOM. 
+        userName = prompt("What is your name?")
+        displayScore();
+
     } else {
         showMyQuestions();
     }
 
-    
+
 }
-
-   
-    
-
-
-
-//Object containing my questions. I wrote this first but changed to the array used for the quiz.
-const myQuestionsJson = [
-    {
-
-        question: "1. What does NaN mean in code?",
-        choices: [
-            "Not a name.",
-            "Name and number.",
-            "Not a number."
-        ],
-        answer: "Not a number."
-    },
-
-    {
-        question: "2. Which HTML element do we use for JavaScript?",
-        choices: [
-            "<scripting>",
-            "<js>",
-            "script"
-        ],
-        answer: "script"
-    },
-
-    {
-        question: "3. The statement a === b refers to ",
-        choices: [
-            "Both a and b are equal in value, type and reference address.",
-            "Both a and b are equal in value.",
-            "Both a and b are equal in value and type."
-        ],
-        answer: "Both a and b are equal in value and type."
-    },
-
-    {
-        question: "4. Which of the following best describes JavaScript?",
-        choices: [
-            "a compiled scripting language.",
-            " an object-oriented scripting language.",
-            " a scripting language precompiled in the browser."
-        ],
-        answer: " an object-oriented scripting language."
-    },
-
-    {
-        question: "5. Which of the following is the structure of an if statement?",
-        choices: [
-            "if (conditional expression is true) thenexecute this codeend if",
-            "if (conditional expression is true)execute this codeend if",
-            "if (conditional expression is true)   {then execute this code>->}"
-        ],
-        answer: "if (conditional expression is true)   {then execute this code>->}"
+//The winner element in my html page will be used to display the user name and score after the end of game. 
+function displayScore() {
+    if (userName) {
+        document.getElementById("winner").style.display = "block";
+        document.getElementById("winner").innerHTML = "Player: " + userName + "   Score: " + scoreText;
     }
-];
+}

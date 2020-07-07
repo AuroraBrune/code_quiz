@@ -22,34 +22,41 @@
 
 <body>
     <div class="jumbotron-q">
-        <div id="finished">
-            <h1 class="display-4">JavaScript Quiz</h1>
+        <div>
+            <!-- The answer-window div is set to style-display: none; after last question is answered. I did this to switch
+            to the score display for user name and score.-->
+            <div id="answer-window">
+                <h1 class="display-4">JavaScript Quiz</h1>
 
-            <hr class="my-4">
+                <hr class="my-4">
 
-            <container class="quiz">
-                <h3 id="question_text"></h3>
-
-                <div class="btn-group-vertical">
+                <container class="quiz">
+                    <h3 id="question_text"></h3>
+                    <!-- Player will select the answer choice with these radio butons.-->
                     <input type="radio" name="choice" id="a">
                     <p id="btna"></p><br>
                     <input type="radio" name="choice" id="b">
                     <p id="btnb"></p><br>
                     <input type="radio" name="choice" id="c">
                     <p id="btnc"></p><br>
-                </div>
+            </div>
 
             </container>
-        
 
-        <div class="row">
-            <button type="submit" class="btns" onclick="userScore()">Submit Choice</button>
+
+            <div class="row">
+                <!--Player will submit choice, I used this button so the player has an option to change their answer. 
+                    I could have had the radio buttons choice also submit, in that case the user wouldn't be able to change their choice. -->
+                <button type="submit" class="btns" onclick="userScore()">Submit Choice</button>
+            </div>
 
         </div>
     </div>
+    <!--The user name and score will be printed here after end of game. This div is set to style-display: none; until 
+        the game is over, when it will change to style-display: block. -->
+    <h3 id="winner"></h3>
     </div>
-    
+    <script src=script.js></script>
 </body>
-<script src=script.js></script>
 
 </html>

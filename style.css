@@ -6,7 +6,7 @@
      background-color: lightblue;
  }
 
- .display-4 {
+ .display-4, .lead {
      text-align: center;
  }
 
@@ -41,41 +41,11 @@
      display: inline-block;
      font-size: 16px;
  }
-#showScore {
-    text-align: right;
-}
 
-/* 
- */
-
- /* .btns {} */
-
- /*  #btna {
-     background-color: navy;
-     height: 25px;
-     width: 100px;
-     margin-top: 200px;
-     padding-left: 30px;
-     padding-right: 30px;
-     margin-right: 30px;
+ #showScore {
+     text-align: right;
  }
-
- #btnb {
-     background-color: navy;
-     height: 25px;
-     width: 100px;
-     padding-left: 30px;
-     padding-right: 30px;
-     margin-left: 30px;
-     margin-right: 30px;
+/*this will not be shown on the screen until the end of game when the questions will be set to display none, and this will be set to display block. */
+ #winner {
+     display: none;
  }
-
- #btnc {
-     background-color: navy;
-     height: 25px;
-     width: 100px;
-     padding-left: 30px;
-     padding-right: 30px;
-     margin-left: 30px;
-     margin-right: 30px;
- } */
