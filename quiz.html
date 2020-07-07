@@ -12,40 +12,43 @@
 
 </head>
 <div class="row">
-    
-    <h3 class="col-2">Time remaining  </h3>
+    <h3 class="col-2"></h3>
+    <h3 class="col-2">Time remaining </h3>
     <h3 class="col-2" id="countdownTimer"></h3>
     <h3 class="col-2"></h3>
-    <h3 class="col-2"></h3>
-    <h3 class="col-2">Score </h3>
+    <h3 class="col-2" id="showScore">Score </h3>
     <h3 class="col-2" id="score"></h3>
 </div>
 
 <body>
     <div class="jumbotron-q">
-        <h1 class="display-4">JavaScript Quiz</h1>
+        <div id="finished">
+            <h1 class="display-4">JavaScript Quiz</h1>
 
-        <hr class="my-4">
+            <hr class="my-4">
 
-        <container class="quiz">
-            <h3 id="question_text"></h3>
+            <container class="quiz">
+                <h3 id="question_text"></h3>
 
-            <div class="btn-group-vertical">
-                <input type="radio" name="choice" id="a">
-                <p id="btna"></p><br>
-                <input type="radio" name="choice" id="b">
-                <p id="btnb"></p><br>
-                <input type="radio" name="choice" id="c">
-                <p id="btnc"></p><br>
-            </div>
+                <div class="btn-group-vertical">
+                    <input type="radio" name="choice" id="a">
+                    <p id="btna"></p><br>
+                    <input type="radio" name="choice" id="b">
+                    <p id="btnb"></p><br>
+                    <input type="radio" name="choice" id="c">
+                    <p id="btnc"></p><br>
+                </div>
 
-        </container>
+            </container>
+        
 
         <div class="row">
             <button type="submit" class="btns" onclick="userScore()">Submit Choice</button>
 
         </div>
-
+    </div>
+    </div>
+    
 </body>
 <script src=script.js></script>
 

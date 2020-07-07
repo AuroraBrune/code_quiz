@@ -2,8 +2,9 @@
 var scoreText = 0;
 let score = document.getElementById("score");
 score.innerHTML = scoreText;
+let hiScore = [];
 
-//setting my questions array, could build using JSON object
+//setting my questions array, could have also built using JSON object
 let myQuestions = [];
 const question1 = ["1. What does NaN mean in code?", "Not a number.", "Not a name.", "Name and number.", "1"];
 const question2 = ["2. Which HTML element do we use for JavaScript?", "< scripting >", "< js >", "script", "3"]; //added spaces in answers to prevent script tags in our answers. 
@@ -57,7 +58,7 @@ function userScore() {
     var choice;
     if (document.getElementById("a").checked == true) {
         choice = 1;
-        document.getElementById("a").checked = false;
+        document.getElementById("a").checked = false;  //this resets the buttons to off for next question
     }
     if (document.getElementById("b").checked == true) {
         choice = 2;
@@ -72,24 +73,31 @@ function userScore() {
     if (choice == answer) {
         scoreText++;
         score.innerHTML = scoreText;
-        // alert("choice equals answer ");  
+         
     } else {
         secondsLeft = secondsLeft - 15;
     }
-    //increase question index by one
+    //increase question index by one, loads the next question each time it loops until last question
     currentIndex++;
     //test to see if end of questions array
     if (currentIndex > myQuestions.length - 1) {
         //game over
         clearInterval(timer);
-        alert("game over");
+        document.getElementById("finished").style.display = "none";
+        
     } else {
         showMyQuestions();
     }
 
+    
 }
 
-//Object containing my questions
+   
+    
+
+
+
+//Object containing my questions. I wrote this first but changed to the array used for the quiz.
 const myQuestionsJson = [
     {
 
