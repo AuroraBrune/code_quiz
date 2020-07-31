@@ -47,10 +47,7 @@ function showMyQuestions() {
     document.getElementById("btna").innerHTML = question[1];
     document.getElementById("btnb").innerHTML = question[2];
     document.getElementById("btnc").innerHTML = question[3];
-
 }
-
-
 
 function userScore() {
 
@@ -90,7 +87,6 @@ function userScore() {
     } else {
         showMyQuestions();
     }
-
 
 }
 //The winner element in my html page will be used to display the user name and score after the end of game. 
