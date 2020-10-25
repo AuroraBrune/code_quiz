@@ -38,8 +38,8 @@ You are required to submit the following for review:
 
 for my multiple choice questions, I got some questions from the internet on this site, <a href= http://mcqspdfs.blogspot.com/2013/08/60-top-javascript-multiple-choice.html></a>
 
-![image](Assets\codequizScreenShot.jpg)
-![image](Assets\codequizScreen.jpg)
+![image](Assets/codequizScreenShot.jpg)
+![image](Assets/codequizScreen.jpg)
 Copyright 2020, Aurora Brune
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
